@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+    <head>
+        <meta charset="utf-8">
+        <title>Steven Ross</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal website of Steven Ross. Software developer and IT generalist.">
+        <meta name="author" content="Steven Ross">
+        <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="css/main.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container" ng-controller="NavCtrl">
+                <div class="row text-center">
+                    <div class="col col-lg-8 col-offset-2">
+                        <div class="col col-lg-2"><a ng-class="{active: '/' == currentPath()}" href="#">Who?</a>
+                        </div>
+                        <div class="col col-lg-2"><a ng-class="{active: '/lab' == currentPath()}" href="#/lab">Lab</a>
+                        </div>
+                        <div class="col col-lg-4" id="head"></div>
+                        <div class="col col-lg-2"><a href="https://plus.google.com/104527392710445509450">Google+</a>
+                        </div>
+                        <div class="col col-lg-2"><a contactscroll href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-12" id="signature"></div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-6 col-offset-3 text-center" id="tagline">Hello<span class="highlight">.</span>  <span class="dull">I’m a software developer &amp; IT generalist living in Edinburgh, Scotland.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-8 col-offset-2" ng-view></div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-8 col-offset-2">
+                        <h1>Get In Touch</h1>
+                        <p>Contact me via my email address <span emailhide></span> or by using the form below. You can expect a reply within 24 hours.</p>
+                        <form novalidate name="contactform" ng-controller="ContactCtrl">
+                            <fieldset>
+                                <input name="email" ng-model="data.email" type="text" placeholder="your email address…" required>
+                                <textarea name="message" ng-model="data.message" placeholder="after typing your message here, click the send button" rows="5" required></textarea>
+                                <span ng-hide="sent">
+                                    <button ng-click="submit(data)" ng-disabled="contactform.$invalid" class="btn btn-default">Send</button>
+                                </span>
+                                <span ng-show="sent">
+                                    <p>Message sent.</p>
+                                </span>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/angular.js"></script>
+        <script src='js/firebase.js'></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

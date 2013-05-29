@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Slab Thin'), local('RobotoSlab-Thin'), url(../fonts/RobotoSlab100.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../fonts/RobotoSlab300.woff) format('woff');
+}
+
+body {
+	background-color: #fffcf5;
+	color: #050a1a;
+	font: 300 2em 'Roboto Slab', serif;
+}
+
+body, li {
+	line-height: 2em;
+}
+
+#header {
+	background: url('../images/grid.png') repeat fixed center;
+	border-top: 5px solid #f5ba0a;
+	color: #ffffff;
+	font-weight: 100;
+	line-height: 4em;
+	padding-bottom: 2em;
+}
+
+#header a, #header a:link {
+	color: #ffffff;
+}
+
+#header a.active {
+	color: #f5ba0a;
+}
+
+#header a:hover {
+	color: #ffdf80;
+}
+
+#header a:link, #header a:hover {
+	text-decoration: none;
+}
+
+#head {
+	background: url('../images/head.png') no-repeat scroll center; 
+	height: 130px;
+	margin-bottom: -20px;
+}
+
+#signature {
+	background: url('../images/signature.png') no-repeat scroll center; 
+	height: 104px;
+}
+
+#tagline {
+	padding-top: 1em;
+	line-height: 1.5em;
+}
+
+h1 {
+	color: #0e0e0e;
+	margin-top: 1em;
+}
+
+p {
+	color: #0f121a;
+	margin-top: 1em;
+	text-align: justify;
+}
+
+.highlight {
+	color: #f2b90c;
+}
+
+.dull {
+	color: #e5e5e5;
+}
+
+footer {
+	background-color: #ffffff;
+	border-top: 2px solid #050a1a;
+	margin-top: 2em;
+	padding-bottom: 2em;
+}
+
+textarea, input[type="text"], .btn {
+	font-size: 1em;
+	margin-top: 1em;
+}
+
+fieldset span, fieldset .btn {
+	float: right;
+}
+
+.btn {
+	background-color: #0f121a;
+}
